@@ -22,7 +22,8 @@ public class EmployeeDaoImpl implements EmployeeDAO{
 
     @Override
     public List<Employee> findAll() {
-        String queryString = "from employee";
+        // here below name of class Employee should come rather than your table name employee
+        String queryString = "from Employee";
         TypedQuery<Employee> query = entityManager.createQuery(queryString,Employee.class);
 
         List<Employee> employees = query.getResultList();
